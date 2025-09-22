@@ -7,7 +7,7 @@ interface movieProps {
     }
 }
 
-const MovieDeatils = async ({ params }: movieProps) => {
+const MovieDeatils = ({ params }: movieProps) => {
     const movies = [
         {
             "id": "1",
