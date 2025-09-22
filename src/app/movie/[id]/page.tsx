@@ -7,7 +7,7 @@ interface movieProps {
     }
 }
 
-const MovieDeatils = ({ params }: movieProps) => {
+const MovieDeatils = async({ params }: movieProps) => {
     const movies = [
         {
             "id": "1",
@@ -46,7 +46,8 @@ const MovieDeatils = ({ params }: movieProps) => {
             ]
         }
     ]
-    const movie = movies.find((m) => m.id === params.id)
+    const {id} = await params
+    const movie = movies.find((m) => m.id === id)
     return (
         <div className='p-8 space-y-8 bg-gray-900 min-h-screen'>
             {/* movie title & description  */}
