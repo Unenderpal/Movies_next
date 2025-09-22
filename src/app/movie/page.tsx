@@ -11,8 +11,8 @@ const MoviePage = () => {
     <div className='p-6'>
         <h2 className='text-3xl font-semibold mb-4'>Movies List</h2>
         <ul className="space-y-4">
-            {movies.map((movie,id) =>(
-                <li key={id} className='bg-gray-800 p-4 rounded-lg '>
+            {movies.map(movie =>(
+                <li key={movie.id} className='bg-gray-800 p-4 rounded-lg '>
                     <Link className='text-blue-400 hover:text-blue-600  ' href={`/movie/${movie.id}`}> 
                     {movie.title}</Link>
                 </li>
